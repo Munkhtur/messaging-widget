@@ -153,8 +153,8 @@ class MessageWidget {
   }
 }
 
-function initializeWidget() {
+export function initializeWidget() {
   return new MessageWidget();
 }
 
-initializeWidget();
+// initializeWidget();
