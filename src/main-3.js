@@ -1,16 +1,18 @@
 import { CLOSE_ICON, MESSAGE_ICON, styles } from "./assets.js";
 
 class MessageWidget {
-  constructor(position = "bottom-right") {
+  constructor(position = "bottom-right", title = "Start a conversation") {
     this.position = this.getPosition(position);
     this.open = false;
     this.initialize();
     this.injectStyles();
+    this.title = title
   }
 
   position = "";
   open = false;
   widgetContainer = null;
+
 
   getPosition(position) {
     const [vertical, horizontal] = position.split("-");
@@ -81,7 +83,7 @@ class MessageWidget {
   createWidgetContent() {
     this.widgetContainer.innerHTML = `
         <header class="widget__header">
-            <h3>Start a conversation</h3>
+            <h3>${this.title}</h3>
             <p>We usually respond within a few hours</p>
         </header>
 
@@ -152,9 +154,8 @@ class MessageWidget {
     }
   }
 }
-
-export default function initializeWidget() {
-  return new MessageWidget();
+export default function initializeWidget(position, title) {
+  return new MessageWidget(position, title);
 }
 
 initializeWidget();
