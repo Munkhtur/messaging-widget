@@ -157,4 +157,4 @@ export default function initializeWidget() {
   return new MessageWidget();
 }
 
-// initializeWidget();
+initializeWidget();
