@@ -12,6 +12,7 @@ class MessageWidget {
   position = "";
   open = false;
   widgetContainer = null;
+  title = ""
 
 
   getPosition(position) {
