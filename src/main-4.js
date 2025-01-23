@@ -71,7 +71,7 @@ class MessageWidget {
     /**
      * Invoke the `createWidget()` method
      */
-    this.createWidgetContent();
+    this.createWidgetContent(this.title);
 
     /**
      * Append the widget's content and the button to the container
@@ -80,10 +80,10 @@ class MessageWidget {
     container.appendChild(buttonContainer);
   }
 
-  createWidgetContent() {
+  createWidgetContent(title) {
     this.widgetContainer.innerHTML = `
         <header class="widget__header">
-            <h3>${this.title}</h3>
+            <h3>${title}</h3>
             <p>We usually respond within a few hours</p>
         </header>
 
