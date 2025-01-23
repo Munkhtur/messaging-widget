@@ -3,10 +3,10 @@ import { CLOSE_ICON, MESSAGE_ICON, styles } from "./assets.js";
 class MessageWidget {
   constructor(position = "bottom-right", title = "Start a conversation") {
     this.position = this.getPosition(position);
+    this.title = title
     this.open = false;
     this.initialize();
     this.injectStyles();
-    this.title = title
   }
 
   position = "";
