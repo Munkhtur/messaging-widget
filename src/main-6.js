@@ -154,7 +154,7 @@ class MessageWidget {
     }
   }
 }
-export default function initializeWidget(position, title) {
+export default function initializeWidget({ position = "bottom-right", title = "Start a conversation" } = {}) {
   return new MessageWidget(position, title);
 }
 
