@@ -153,7 +153,7 @@ class MessageWidget {
   }
 }
 
-export function initializeWidget() {
+export default function initializeWidget() {
   return new MessageWidget();
 }
 
