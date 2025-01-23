@@ -158,4 +158,4 @@ export default function initializeWidget(position, title) {
   return new MessageWidget(position, title);
 }
 
-initializeWidget();
+// initializeWidget();
